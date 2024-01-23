@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Authentication in Next.js
 
-## Getting Started
+Authenticate **Next.js** app using `next-auth`.
 
-First, run the development server:
+## This Repository Covers
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Authentication
+- Next.js Middleware
+- User Management
+- Role Management
+- Sessions
+- Credential Providers (Google, Github)
+- Email Verification
+- 2 Factor Authentication
+- Forgot Password
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 14 (Server Actions)
+- Typescript
+- Shadcn-ui
+- Tailwind CSS
+- Prisma
+- PostgreSQL
+- **Auth v5**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Other Packages
 
-## Learn More
+**Auth js:**
 
-To learn more about Next.js, take a look at the following resources:
+```npm install next-auth@beta```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This is the version '^5.0.0-beta.5'. It's currently in beta. Check out the
+officical docs. <https://authjs.dev/guides/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Adopt Prisma with Auth.js
 
-## Deploy on Vercel
+   ```npm i @auth/prisma-adapter```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Bcrypt for Password Hashing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```npm i bcryptjs @types/bcryptjs```
+
+- Initialize `shadcn-ui`
+    ```npx shadcn-ui@latest init```
+
+- Add the following components
+    ```npx shadcn-ui@latest add form input button```
+
+> This will automatically add the required npm packages to use forms.
+> If you want to checkout implementation of forms using shadcn-ui, checkout the
+> [documentation](https://github.com/Sarmad426/Documentation/tree/master/Shadcn-zod-forms).
+> if you want to install manually.
+
+```npm i zod react-hook-form@latest```
+
+- For other Next-js installations
+
+Check out the following resource.
+
+[Documentation](https://github.com/Sarmad426/Documentation/tree/master/Nextjs-project-installations)
+
+- For `Prisma`
+
+[Documentation](https://github.com/sarmad426/Documentation/tree/master/prisma)
