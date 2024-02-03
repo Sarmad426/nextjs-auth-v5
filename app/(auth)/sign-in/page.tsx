@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { SignInForm } from "../components/sign-in-form";
 import { Heading } from "@/components/ui/heading";
+import { CardWrapper } from "../components/card-wrapper";
 
 export const metadata: Metadata = {
   title: "Sign in",
@@ -10,8 +11,14 @@ export const metadata: Metadata = {
 export default function SignIn() {
   return (
     <div>
-      <Heading title="Login" description="Welcome Back" />
-      <SignInForm />
+      <CardWrapper
+        title="Login"
+        description="Welcome Back"
+        footerContent="Don't have an account?"
+        url="sign-up"
+      >
+        <SignInForm />
+      </CardWrapper>
     </div>
   );
 }
