@@ -59,14 +59,14 @@ export const SignInForm = () => {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input {...field} type="password" />
+                  <Input {...field} type="password" placeholder="*******" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-5">
           <Button className="w-1/2" type="submit">
             Login
           </Button>
