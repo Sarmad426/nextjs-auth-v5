@@ -26,13 +26,13 @@ export const CardWrapper: React.FC<CardProps> = ({
   url,
 }) => {
   return (
-    <Card className="w-1/4">
+    <Card className="xl:w-1/4 lg:w-1/3 md:w-2/5 sm:w-1/2 w-4/6">
       <CardHeader className="flex items-center justify-center">
         <CardTitle className="text-2xl">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>{children}</CardContent>
-      <CardFooter className="my-2 text-sm flex justify-center text-blue-500">
+      <CardFooter className="mt-2 text-sm flex justify-center text-blue-500 mb-2 pb-2">
         <Link href={`/${url}`}>{footerContent}</Link>
       </CardFooter>
     </Card>
