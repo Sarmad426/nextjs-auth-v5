@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function SignIn() {
   return (
-    <div className="flex items-center justify-center mb-4 flex-col w-full">
+    <div className="flex items-center justify-center mb-4 flex-col w-full space-y-6">
       <Heading title="🔐AUTH" />
       <CardWrapper
         title="Login"
