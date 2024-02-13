@@ -1,6 +1,6 @@
 "use client";
 
-import { typeRegisterSchema, RegisterSchema } from "@/schema/form-schema";
+import { typeRegisterSchema, registerSchema } from "@/schema/form-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button";
 
 export const SignUpForm = () => {
   const form = useForm<typeRegisterSchema>({
-    resolver: zodResolver(RegisterSchema),
+    resolver: zodResolver(registerSchema),
     defaultValues: {
       name: "",
       email: "",

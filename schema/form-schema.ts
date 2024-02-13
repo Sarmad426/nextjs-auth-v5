@@ -5,15 +5,15 @@ import { z } from 'zod'
  * Types of Login and Register Form Schemas
  */
 
-export const LoginSchema = z.object({
+export const loginSchema = z.object({
     email: z.string().email({ message: "invalid Email⚠️" }),
     password: z.string().min(1, { message: "invalid Password⚠️" })
 })
 
-export type typeLoginSchema = z.infer<typeof LoginSchema>
+export type typeLoginSchema = z.infer<typeof loginSchema>
 
 
-export const RegisterSchema = z.object({
+export const registerSchema = z.object({
     name: z.string().min(2, { message: "Name of 2 characters is required!" }),
     email: z.string().email({ message: "invalid Email⚠️" }),
     password: z.string().min(1, { message: "Password of 6 characters is required!" })
@@ -21,4 +21,4 @@ export const RegisterSchema = z.object({
 
 
 
-export type typeRegisterSchema = z.infer<typeof RegisterSchema>
+export type typeRegisterSchema = z.infer<typeof registerSchema>

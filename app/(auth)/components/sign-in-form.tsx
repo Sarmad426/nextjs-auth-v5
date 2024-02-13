@@ -12,13 +12,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import { LoginSchema, typeLoginSchema } from "@/schema/form-schema";
+import { loginSchema, typeLoginSchema } from "@/schema/form-schema";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 export const SignInForm = () => {
   const form = useForm<typeLoginSchema>({
-    resolver: zodResolver(LoginSchema),
+    resolver: zodResolver(loginSchema),
     defaultValues: {
       email: "",
       password: "",
