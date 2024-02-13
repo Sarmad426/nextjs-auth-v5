@@ -16,7 +16,7 @@ import { FcGoogle } from "react-icons/fc";
 interface CardProps {
   children: React.ReactNode;
   title: string;
-  description: string;
+  description?: string;
   footerContent: string;
   url: string;
 }
