@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { register } from "@/actions/register";
 
 export const SignUpForm = () => {
   const form = useForm<typeRegisterSchema>({
@@ -25,8 +26,8 @@ export const SignUpForm = () => {
     },
   });
 
-  const onSubmit = (values: typeRegisterSchema) => {
-    console.log(values);
+  const onSubmit = async (values: typeRegisterSchema) => {
+    await register(values);
   };
 
   return (
