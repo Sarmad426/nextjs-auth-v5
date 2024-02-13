@@ -9,9 +9,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { FaGithub } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
+import SocialButtons from "./social-buttons";
 
 interface CardProps {
   children: React.ReactNode;
@@ -36,14 +34,7 @@ export const CardWrapper: React.FC<CardProps> = ({
       </CardHeader>
       <CardContent>{children}</CardContent>
       <CardFooter className="my-2 flex justify-center flex-col pb-2">
-        <div className="my-2 flex items-center justify-center w-full space-x-6">
-          <Button variant="outline" className="w-2/5">
-            <FcGoogle className="w-8 h-8" />
-          </Button>
-          <Button variant="outline" className="w-2/5">
-            <FaGithub className="w-8 h-8" />
-          </Button>
-        </div>
+        <SocialButtons />
         <Link className="text-sm text-blue-500 mt-2" href={`/${url}`}>
           {footerContent}
         </Link>
