@@ -27,7 +27,7 @@ export const CardWrapper: React.FC<CardProps> = ({
   url,
 }) => {
   return (
-    <Card className="xl:w-1/4 lg:w-1/3 md:w-2/5 sm:w-1/2 w-4/6">
+    <Card className="xl:w-1/4 lg:w-1/3 md:w-2/5 sm:w-1/2 w-[95%]">
       <CardHeader className="flex items-center justify-center">
         <CardTitle className="text-2xl">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
